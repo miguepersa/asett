@@ -33,12 +33,13 @@ The API will return appropriate HTTP status codes and error messages in case of 
 
 To create a new doctor profile, make a POST request to `/doctors/` with the following JSON data:
 
+```
 json
 {
   "user": <user_id>,
   "name": "<doctor_name>"
 }
-
+```
 
 Replace `<user_id>` with the ID of the user who will be associated with the doctor profile. Replace `<doctor_name>` with the doctor's name.
 
@@ -46,12 +47,14 @@ Replace `<user_id>` with the ID of the user who will be associated with the doct
 
 To create a new patient profile, make a POST request to `/patients/` with the following JSON data:
 
+```
 json
 {
   "user": <user_id>,
   "name": "<patient_name>",
   "can_login": <boolean>
 }
+```
 
 
 Replace `<user_id>` with the ID of the user who will be associated with the patient profile. Replace `<patient_name>` with the patient's name. Replace `<boolean>` with `true` if the patient should be able to log in to the system, or `false` if they should not.
@@ -60,12 +63,14 @@ Replace `<user_id>` with the ID of the user who will be associated with the pati
 
 To create a new appointment, make a POST request to `/appointments/` with the following JSON data:
 
+```
 json
 {
   "doctor": <doctor_id>,
   "start_time": "<start_time>",
   "end_time": "<end_time>"
 }
+```
 
 
 Replace `<doctor_id>` with the ID of the doctor the patient wants to schedule an appointment with. Replace `<start_time>` and `<end_time>` with the desired appointment time slot in ISO 8601 format (e.g., `2023-10-04T10:00:00Z`).
