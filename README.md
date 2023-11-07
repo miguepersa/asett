@@ -33,7 +33,7 @@ The API will return appropriate HTTP status codes and error messages in case of 
 
 To create a new doctor profile, make a POST request to `/doctors/` with the following JSON data:
 
-```json
+json
 {
   "user": <user_id>,
   "name": "<doctor_name>"
@@ -60,7 +60,7 @@ Replace `<user_id>` with the ID of the user who will be associated with the pati
 
 To create a new appointment, make a POST request to `/appointments/` with the following JSON data:
 
-```json
+json
 {
   "doctor": <doctor_id>,
   "start_time": "<start_time>",
